@@ -1,106 +1,91 @@
-# IT Help Desk System Project Plan
+# Help Desk System Plan
 
-## Overview
-This project is a web-based IT Help Desk System built with:
+## Project Goal
 
-- Apache Web Server
-- PHP
-- MariaDB
-- Bootstrap
+Create a web-based IT Help Desk system where users can log in, submit support tickets, track ticket progress, read knowledge base articles, and allow admins to manage tickets.
 
-The system allows users to submit and track IT support tickets, while administrators manage tickets and monitor system activity.
+## Technologies
 
----
+* Flask web server
+* MariaDB database
+* Bootstrap for design
+* Apache for hosting later
+* Python backend
+* HTML templates
 
-## Features
+## Main Features
 
-### User Login
-- User authentication using email and password.
-- Session management for logged-in users.
+### 1. User Login
 
-### Ticket Submission
-- Users can create support tickets.
-- Tickets include subject, department, and description.
+Users can register, log in, and log out. Passwords will be stored securely using password hashing.
 
-### Ticket Tracking
-- Users can view the status of their submitted tickets.
-- Status options:
-  - Open
-  - In Progress
-  - Closed
+### 2. Ticket Submission
 
-### Knowledge Base
-- Displays common IT solutions and troubleshooting guides.
-- Reduces repetitive support requests.
+Logged-in users can submit IT-related problems by entering a title, description, and department.
 
-### Admin Dashboard
-- View all tickets.
-- Monitor ticket statistics.
-- Update ticket status.
+### 3. Ticket Tracking
 
----
+Users can view their submitted tickets and check the current status: open, in progress, or closed.
 
-## Database Design
+### 4. Knowledge Base
+
+The system will include helpful IT support articles for common problems such as password issues, network problems, and computer troubleshooting.
+
+### 5. Admin Dashboard
+
+Admins can view all submitted tickets, check ticket details, and update ticket statuses.
+
+## Database Tables
 
 ### users
-Stores user information.
+
+Stores user account information.
 
 Fields:
-- id
-- name
-- email
-- password
-- role
+
+* id
+* username
+* password
+* role
 
 ### departments
-Stores support departments.
+
+Stores support department names.
 
 Fields:
-- id
-- name
+
+* id
+* name
 
 ### tickets
-Stores support tickets.
+
+Stores submitted support tickets.
 
 Fields:
-- id
-- user_id
-- department_id
-- subject
-- message
-- status
-- created_at
 
----
+* id
+* user_id
+* department_id
+* title
+* description
+* status
+* created_at
 
-## System Structure
+## Development Steps
 
-index.php
-- Login page
-- Ticket submission
-- Ticket tracking
-- Knowledge base
-- Admin dashboard
-
-MariaDB
-- users table
-- departments table
-- tickets table
-
-Bootstrap
-- Responsive user interface
-
----
+1. Create the project folder.
+2. Install Flask and MariaDB connector.
+3. Create the MariaDB database.
+4. Create the users, departments, and tickets tables.
+5. Build the login and registration system.
+6. Build the ticket submission page.
+7. Build the ticket tracking page.
+8. Add a simple knowledge base page.
+9. Build the admin dashboard.
+10. Test the full system.
+11. Improve the design with Bootstrap.
+12. Prepare the project for Apache hosting.
 
 ## Expected Outcome
 
-Users can:
-- Log in
-- Submit tickets
-- Track ticket status
-- Read knowledge base articles
-
-Administrators can:
-- View all tickets
-- Manage ticket status
-- Monitor help desk activity
+The final system will allow users to report IT problems online and allow admins to manage support requests from one dashboard.
