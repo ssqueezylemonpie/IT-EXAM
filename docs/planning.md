@@ -6,8 +6,8 @@ Create a web-based IT Help Desk system where users can log in, submit support ti
 
 ## Technologies
 
-* Flask web server
-* MariaDB database
+* Flask web server 
+* MariaDB database 
 * Bootstrap for design
 * Apache for hosting later
 * Python backend
