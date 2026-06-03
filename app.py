@@ -16,7 +16,7 @@ import pymysql
 
 # Create the Flask app.
 app = Flask(__name__)
-app.secret_key = "change-this-secret-key"
+app.secret_key = "NorwayWorldCup2026!"  # Change this to a random secret key in production.
 
 
 # Database connection settings.
